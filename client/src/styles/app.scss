@@ -1,0 +1,465 @@
+* {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Poppins';
+}
+
+/*APP.JSX*/
+.Container {
+  display: flex;
+  background-color: #dde5f4;
+  overflow: hidden;
+  width: 100%;
+  min-width: 0;
+
+  .Pages {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .Page {
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+    width: auto;
+    min-width: 0px;
+    background-color: white;
+    border-radius: 20px;
+    overflow: scroll;
+    position: relative;
+  }
+}
+
+.Container ::-webkit-scrollbar {
+  display: none;
+}
+
+/*NAVBAR.JSX*/
+.Navbar {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  max-height: 2rem;
+  width: 100%;
+
+
+  .Username {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    padding: 0.3rem 1rem;
+    margin-top: 0.1rem;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 2rem;
+    margin-right: 1rem;
+  }
+
+  .SearchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: none;
+    flex: 1;
+    min-width: 0;
+    margin-left: 1rem;
+    padding: 5px;
+    margin-bottom: 0.6rem;
+
+    .InputContainer {
+      display: flex;
+      min-width: 0;
+      flex-basis: 500px;
+      position: relative;
+    }
+
+    .Input {
+      outline: none;
+      padding: 5px;
+      padding-left: 1rem;
+      width: 100%;
+      border: 0.5px solid lightgray;
+      border-radius: 10px;
+      font-size: 1rem;
+    }
+
+    .Icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      right: 1rem;
+      top: 5px;
+      bottom: auto;
+    }
+  }
+
+}
+
+/*SINGLE POST*/
+.SinglePostContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+  width: 100%;
+  overflow-y: scroll;
+
+  .changePost {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: fit-content;
+    background-color: #1f343d;
+    border-bottom-left-radius: 20px;
+
+    .line {
+      border: 0;
+      height: 1px;
+      background: white;
+    }
+
+    .choice {
+      color: white;
+      font-weight: lighter;
+      padding: 1rem;
+      font-size: small;
+      cursor: pointer;
+    }
+  }
+
+  .PostContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 0;
+    gap: 1rem;
+    height: max-content;
+
+    .Image {
+      max-height: 200px;
+      width: auto;
+    }
+
+    .Title {
+      min-height: 5rem;
+      height: fit-content;
+      color: #020241;
+      width: fit-content;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .Description {
+      display: flex;
+      text-align: justify;
+    }
+
+  }
+}
+
+/*HOME.JSX*/
+.HomeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+  gap: 3rem;
+  min-width: 0;
+  flex-wrap: wrap;
+  overflow-y: scroll;
+
+  .PostContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 0;
+    gap: 1rem;
+    flex-basis: 17rem;
+    height: max-content;
+    overflow: auto;
+
+
+    .Image {
+      max-height: 200px;
+      width: auto;
+    }
+
+    .Title {
+      min-height: 5rem;
+      height: fit-content;
+      color: #020241;
+      width: fit-content;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+
+    .Description {
+      display: flex;
+      text-align: justify;
+      max-height: 7rem;
+      overflow: hidden;
+    }
+
+  }
+}
+
+.HomeContainer::-webkit-scrollbar {
+  display: none;
+}
+
+/*Create Post*/
+.CreatePostContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  gap: 1rem;
+
+  .Title {
+    height: max-content;
+    width: auto;
+    padding: 0.5rem;
+    border: 1px solid lightgray;
+  }
+
+  .Editor {
+    width: 100%;
+
+    .ql-toolbar.ql-snow {
+      height: fit-content;
+    }
+
+    .ql-container.ql-snow {
+      height: auto;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: auto;
+    min-height: fit-content;
+
+    .image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: solid 2px #020241;
+      border-radius: 20px;
+      width: auto;
+      height: fit-content;
+      padding: 0.5rem;
+    }
+
+    .submit {
+      height: fit-content;
+      width: auto;
+      min-width: 25%;
+      padding: 0.5rem;
+      border: solid 2px #020241;
+      border-radius: 20px;
+      font-size: larger;
+      background-color: #020241;
+      color: white;
+    }
+  }
+
+}
+
+.CreatePostContainer::-webkit-scrollbar {
+  display: none;
+}
+
+/*Sidebar*/
+.SidebarContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 6%;
+  min-width: 75px;
+  font-size: large;
+
+  .Logo {
+    height: 4rem;
+  }
+
+  .Elements {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    height: max-content;
+    min-width: 30%;
+    overflow: hidden;
+  }
+
+  .Element {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 100%;
+    margin: 1rem;
+  }
+
+  .Icon {
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .Title {
+    font-size: 10px;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 5px;
+    height: auto;
+  }
+
+  .Logout {
+    display: flex;
+    cursor: pointer;
+    height: auto;
+    padding: 0.5rem 1rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px;
+    border-top-right-radius: 20px;
+    background-color: white;
+
+    .Exit {
+      height: auto;
+      font-weight: bold;
+      color: #1f343d;
+    }
+  }
+}
+
+/*LOGIN.JSX*/
+.LoginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dde5f4;
+  height: 100%;
+  width: 100%;
+
+
+  .Content {
+    height: 90%;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    background-color: #eff2f9;
+    width: 25rem;
+    gap: 1rem;
+    overflow-y: scroll;
+
+  }
+
+  .Content::-webkit-scrollbar {
+    display: none;
+  }
+
+  .Image {
+    padding: 0 auto;
+    width: auto;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+
+  .LoginForm {
+    display: flex;
+    flex-direction: column;
+    height: max;
+    gap: 2rem;
+
+    .Element {
+      display: flex;
+      flex-direction: column;
+      height: auto;
+      background: white;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 0 10%;
+      padding: 10px;
+      border: 2px solid-grey;
+      border-radius: 10px;
+      gap: 8px;
+
+      .Title {
+        padding-left: 5px;
+        color: #4d4d4d;
+        font-size: medium;
+        font-weight: bold;
+      }
+
+      .valueContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .Value {
+          border: none;
+          width: 90%;
+          padding: 5px;
+          outline: none;
+          font-size: small;
+
+          &::placeholder {
+            font-weight: lighter;
+          }
+        }
+      }
+    }
+
+    .submit {
+      height: auto;
+      width: 70%;
+      align-self: center;
+      padding: 10px;
+      border: none;
+      border-radius: 2rem;
+      background-color: #020241;
+      color: white;
+      font-size: large;
+      cursor: pointer;
+    }
+
+    .bottom {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      .text {
+        font-size: 13px;
+        color: #7d7c7c;
+        cursor: pointer;
+      }
+    }
+  }
+}
